@@ -4,7 +4,7 @@ import time
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.touch_actions import TouchActions
 from selenium.webdriver.common.action_chains import ActionChains
-from mlogin_param import *
+#from mlogin_param import *
 from settings import *
 
 
@@ -57,4 +57,12 @@ try:
     Cookie = Cookie[:-1]
     print(Cookie)
 except:
+    time.sleep(2)
+    driver.refresh()
+    cookies = driver.get_cookies()
+    Cookie = ''
+    for cookie in cookies:
+        Cookie = Cookie + cookie.get('name') + ':' + cookie.get('value') + ';'
+    Cookie = Cookie[:-1]
+    print(Cookie)
     pass
