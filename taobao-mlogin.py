@@ -5,7 +5,7 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.touch_actions import TouchActions
 from selenium.webdriver.common.action_chains import ActionChains
 #from mlogin_param import *
-from settings import *
+#from settings import *
 
 
 url = 'https://h5.m.taobao.com/?'
